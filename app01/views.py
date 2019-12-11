@@ -73,7 +73,7 @@ def get_random():
 # 图片验证码相关
 def get_code(request):
     # 推到思路1：直接拿后端现成的图片 二进制模式打开发送
-    # with open(r'D:\上海Python11期视频\python11期视频\在线试听\avatar\u205777803476556477fm26gp0.jpg','rb') as f:
+    # with open(r'D:\上海Python11期视频\python11期视频\BBS\avatar\u205777803476556477fm26gp0.jpg','rb') as f:
     #     data = f.read()
     # return HttpResponse(data)
 
@@ -357,7 +357,7 @@ def get_music(request,id):
     res = ''
     for _char in content:
         if not '\u4e00' <= _char <= '\u9fa5':
-            if  _char in ['，','。','!','？','1','2','3','4','5','6','7','8','9']:
+            if  _char in ['，','。','!','？']:
                 res += _char
             continue
         else:
