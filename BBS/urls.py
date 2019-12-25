@@ -48,6 +48,8 @@ urlpatterns = [
     # 后台管理
     url(r'^backend/',views.backend),
     url(r'^add_article/',views.add_article),
+    url(r'^add_category/',views.add_category),
+    url(r'^add_tag/',views.add_tag),
     # 文本编辑器上传图片
     url(r'^upload_img/',views.upload_img),
     url(r'^get_music/(?P<id>\d+)/$',views.get_music),

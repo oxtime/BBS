@@ -305,6 +305,24 @@ def add_article(request):
 
     return render(request,'backend/add_article.html',locals())
 
+def add_category(request):
+    if request.method == 'POST':
+        category_name = request.POST.get('category_name')
+        blog_id = request.POST.get('blog_id')
+        print(category_name,blog_id)
+        models.Category.objects.create(name=category_name,blog_id=blog_id)
+        return redirect('/add_article/')
+
+
+def add_tag(request):
+    print(111111)
+    if request.method == "POST":
+        article_id = request.POST.get('article_id')
+        blog_id = request.POST.get('blog_id')
+        tag_name = request.POST.get('tag_name')
+        models.Tag.objects.create(name=tag_name,blog_id=blog_id)
+        return redirect('/add_article/')
+
 from BBS import settings
 import os
 
